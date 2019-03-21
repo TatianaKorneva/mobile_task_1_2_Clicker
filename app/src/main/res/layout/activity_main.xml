@@ -43,7 +43,6 @@
             android:id="@+id/imageButton"
             android:layout_width="87dp"
             android:layout_height="87dp"
-
             android:background="@mipmap/ic_launcher" />
 
     </LinearLayout>

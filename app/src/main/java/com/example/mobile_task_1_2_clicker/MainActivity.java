@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton imgBtn;
 
     private long score = 0;
+    String r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
         mainBtn3 = (Button) findViewById(R.id.button3);
         imgBtn = (ImageButton) findViewById(R.id.imageButton);
 
+
+
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 score ++;
-                String s = "Кнопка нажата " + score;
+                if(Math.abs(score)<10 & 1<score & score<5 | Math.abs(score)>20 & Math.abs(score)<100 & 1<score%10 & score%10<5
+                        | Math.abs(score)>100 & Math.abs(score)<1000 & 1<score%100 & score%100<5) {
+                    r="раза";
+                } else {
+                    r="раз";
+                }
+                String s = "Кнопка нажата " + score + " " + r;
                 mainText.setText(s.toCharArray(),0, s.length());
             }
         };
@@ -44,7 +53,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score --;
-                String s = "Кнопка нажата " + score;
+                if(Math.abs(score)<10 & 1<score & score<5 | Math.abs(score)>20 & Math.abs(score)<100 & 1<score%10 & score%10<5
+                        | Math.abs(score)>100 & Math.abs(score)<1000 & 1<score%100 & score%100<5) {
+                    r="раза";
+                } else {
+                    r="раз";
+                }
+                String s = "Кнопка нажата " + score + " " + r;
                 mainText.setText(s.toCharArray(),0, s.length());
             }
         };
@@ -55,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score = 0;
-                String s = "Кнопка нажата " + score;
+                String s = "Кнопка нажата " + score + " раз";
                 mainText.setText(s.toCharArray(),0, s.length());
             }
         };
@@ -66,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score = 555;
-                String s = "Кнопка нажата " + score;
+                String s = "Особое число " + score;
                 mainText.setText(s.toCharArray(),0, s.length());
             }
         };
