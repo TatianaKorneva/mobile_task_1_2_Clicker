@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">mobile_task_1_2_Clicker</string>
+    <string name="click_me">Нажми на меня</string>
+    <string name="btn2">Нажми, чтобы уменьшить на 1</string>
+    <string name="btn3">Сбросить</string>
 </resources>
